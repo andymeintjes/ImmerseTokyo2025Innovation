@@ -3,10 +3,13 @@ import matplotlib
 import seaborn as sns
 import warnings
 import matplotlib.pyplot as plt
+from pathlib import Path
 
 from learntools.core import *
 
-df = pd.read_csv("../input/cancer.csv", index_col="Id")
+from learntools.data_viz_to_coder import DATA_FOLDER
+
+df = pd.read_csv(Path(DATA_FOLDER) / "cancer.csv", index_col="Id")
 
 class LoadCancerData(EqualityCheckProblem):
     _var = 'cancer_data'

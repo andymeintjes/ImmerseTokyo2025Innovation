@@ -2,10 +2,13 @@ import pandas as pd
 import matplotlib
 import seaborn as sns
 import matplotlib.pyplot as plt
+from pathlib import Path
 
 from learntools.core import *
 
-df = pd.read_csv('../input/museum_visitors.csv', index_col="Date", parse_dates=True)
+from learntools.data_viz_to_coder import DATA_FOLDER
+
+df = pd.read_csv(Path(DATA_FOLDER) / 'museum_visitors.csv', index_col="Date", parse_dates=True)
 
 class LoadMuseumData(EqualityCheckProblem):
     _var = 'museum_data'

@@ -2,11 +2,14 @@ import pandas as pd
 import matplotlib
 import seaborn as sns
 import warnings
+from pathlib import Path
 
 from learntools.core import *
 
+from learntools.data_viz_to_coder import DATA_FOLDER
+
 warnings.filterwarnings("ignore")
-df = pd.read_csv("../input/candy.csv", index_col="id")
+df = pd.read_csv(Path(DATA_FOLDER) /  "candy.csv", index_col="id")
 
 class LoadData(EqualityCheckProblem):
     _var = 'candy_data'

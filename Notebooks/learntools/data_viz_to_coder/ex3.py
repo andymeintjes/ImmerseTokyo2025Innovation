@@ -3,11 +3,14 @@ import seaborn as sns
 import matplotlib
 import matplotlib.pyplot as plt
 import warnings
+from pathlib import Path
 
 from learntools.core import *
 
+from learntools.data_viz_to_coder import DATA_FOLDER
+
 warnings.filterwarnings("ignore")
-df = pd.read_csv('../input/ign_scores.csv', index_col="Platform")
+df = pd.read_csv(Path(DATA_FOLDER) / 'ign_scores.csv', index_col="Platform")
 
 class LoadIGNData(EqualityCheckProblem):
     _var = 'ign_data'
