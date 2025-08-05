@@ -1,0 +1,1 @@
+DATA_FOLDER = '../Res/csv/datasets_for_ml'
