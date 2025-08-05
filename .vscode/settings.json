@@ -1,0 +1,6 @@
+{
+  "python.envFile": "${workspaceFolder}/.env",
+  "jupyter.notebookFileRoot": "${workspaceFolder}/Notebooks",
+  "python.analysis.extraPaths": ["${workspaceFolder}/Notebooks"],
+  "python.defaultInterpreterPath": "${command:python.interpreterPath}"
+}
